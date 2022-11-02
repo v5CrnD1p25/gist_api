@@ -20,9 +20,13 @@ class MissingGistDetails(RuntimeError):
         }.get(details_type, '<unknown>')
 
     def __str__(self):
+        envvar = ENVVAR_NAMES.get(self.details_type)
+        if envvar is None:
+            envvar = '?'
+        else:
+            envvar = envvar.format(self.gist_identifier)
         return (
             f'Could not determine a {self.details_type_str} for the gist '
             f'"{self.gist_identifier}"! Make sure to specify it in the '
-            f'environment variable "{ENVVAR_NAMES.get(self.details_type, "?")}'
-            ' or in the credentials file.'
+            f'environment variable "{envvar} or in the credentials file.'
         )
