@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm[toml]>=7.0.5"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gist_api"
+dependencies = [
+    "requests~=2.28",
+]
+requires-python = ">=3.9"
+dynamic = ["version"]
+
+[tool.setuptools_scm]
