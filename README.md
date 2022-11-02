@@ -5,7 +5,7 @@ Very simple library for reading and writing [Gist](https://gist.github.com/) fil
 ## Installation
 
 ```sh
-pip install git+https://github.com/v5CrnD1p25/gist_api@main
+pip install git+https://github.com/v5CrnD1p25/gist_api.git@main
 ```
 
 ## Usage
